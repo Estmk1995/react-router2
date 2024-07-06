@@ -4,8 +4,9 @@ import App from "./App.jsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { HomePage } from "./pages/HomePage.jsx";
-import { ProfilesPage } from "./pages/ProfilesPage.jsx";
+import { ProductsPage } from "./pages/ProductsPage.jsx";
 import { NotFoundPage } from "./pages/NotFoundPage.jsx";
+import { ProductDetails } from "./pages/ProductDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -14,12 +15,16 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
     children: [
       {
-        path: "/Home",
+        path: "/home",
         element: <HomePage />,
       },
       {
-        path: "/profiles",
-        element: <ProfilesPage />,
+        path: "/products",
+        element: <ProductsPage />,
+      },
+      {
+        path: "/products/:productId",
+        element: <ProductDetails />,
       },
     ],
   },

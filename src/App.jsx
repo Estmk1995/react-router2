@@ -6,11 +6,11 @@ function App() {
     <>
       <div className="container">
         <div className="menu">
-          <Link className="menu_item" to={"/Home"}>
+          <Link className="menu_item" to={"/home"}>
             Home Page
           </Link>
-          <Link className="menu_item" to="/Profiles">
-            Profiles Page
+          <Link className="menu_item" to="/products">
+            Productos Page
           </Link>
         </div>
         <Outlet className="app" />
