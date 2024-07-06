@@ -1,14 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Link, Outlet } from "react-router-dom";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1>Hola Tecnología de Software</h1>
+      <div className="container">
+        <div className="menu">
+          <Link className="menu_item" to={"/Home"}>
+            Home Page
+          </Link>
+          <Link className="menu_item" to="/Profiles">
+            Profiles Page
+          </Link>
+        </div>
+        <Outlet className="app" />
+      </div>
     </>
   );
 }
